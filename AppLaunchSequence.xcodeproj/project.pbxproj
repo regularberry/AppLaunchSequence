@@ -147,6 +147,11 @@
 					D8F0F3311F8EB755002E42DB = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					D8F0F3451F8EB755002E42DB = {
 						CreatedOnToolsVersion = 9.0;
@@ -354,9 +359,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VHK5T9DC9A;
 				INFOPLIST_FILE = AppLaunchSequence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.regularberry.com.AppLaunchSequence;
+				PRODUCT_BUNDLE_IDENTIFIER = com.regularberry.AppLaunchSequence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -368,9 +374,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VHK5T9DC9A;
 				INFOPLIST_FILE = AppLaunchSequence/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.regularberry.com.AppLaunchSequence;
+				PRODUCT_BUNDLE_IDENTIFIER = com.regularberry.AppLaunchSequence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
