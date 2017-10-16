@@ -25,159 +25,167 @@ extension UIApplicationState: CustomStringConvertible {
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
+    var callCount = 1
+    
+    // Help us format a GitHub numbered list
+    private func callPrint(_ str: String) {
+        print("\(callCount). \(str)")
+        callCount += 1
+    }
+    
     // MARK: Initializing the App
     
     func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         let lo: String = launchOptions?.description ?? "nil"
-        print("applicationWillFinishLaunchingWithOptions: \(application.applicationState) - LaunchOptions: \(lo)")
+        callPrint("applicationWillFinishLaunchingWithOptions: \(application.applicationState) - LaunchOptions: \(lo)")
         return true
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         let lo: String = launchOptions?.description ?? "nil"
-        print("applicationDidFinishLaunchingWithOptions: \(application.applicationState) - LaunchOptions: \(lo)")
+        callPrint("applicationDidFinishLaunchingWithOptions: \(application.applicationState) - LaunchOptions: \(lo)")
         return true
     }
     
     // Not supposed to use this
     func applicationDidFinishLaunching(_ application: UIApplication) {
-        print("applicationDidFinishLaunching: \(application.applicationState)")
+        callPrint("applicationDidFinishLaunching: \(application.applicationState)")
     }
     
     // MARK: Responding to App State Changes and System Events
     
     func applicationDidBecomeActive(_ application: UIApplication) {
-        print("applicationDidBecomeActive: \(application.applicationState)")
+        callPrint("applicationDidBecomeActive: \(application.applicationState)")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        print("applicationWillResignActive: \(application.applicationState)")
+        callPrint("applicationWillResignActive: \(application.applicationState)")
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        print("applicationDidEnterBackground: \(application.applicationState)")
+        callPrint("applicationDidEnterBackground: \(application.applicationState)")
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        print("applicationWillEnterForeground: \(application.applicationState)")
+        callPrint("applicationWillEnterForeground: \(application.applicationState)")
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        print("applicationWillTerminate: \(application.applicationState)")
+        callPrint("applicationWillTerminate: \(application.applicationState)")
     }
     
     func applicationProtectedDataWillBecomeUnavailable(_ application: UIApplication) {
-        print("applicationProtectedDataWillBecomeUnavailable: \(application.applicationState)")
+        callPrint("applicationProtectedDataWillBecomeUnavailable: \(application.applicationState)")
     }
     
     func applicationProtectedDataDidBecomeAvailable(_ application: UIApplication) {
-        print("applicationProtectedDataDidBecomeAvailable: \(application.applicationState)")
+        callPrint("applicationProtectedDataDidBecomeAvailable: \(application.applicationState)")
     }
     
     func applicationDidReceiveMemoryWarning(_ application: UIApplication) {
-        print("applicationDidReceiveMemoryWarning: \(application.applicationState)")
+        callPrint("applicationDidReceiveMemoryWarning: \(application.applicationState)")
     }
     
     func applicationSignificantTimeChange(_ application: UIApplication) {
-        print("applicationSignificantTimeChange: \(application.applicationState)")
+        callPrint("applicationSignificantTimeChange: \(application.applicationState)")
     }
     
     // MARK: Managing App State Restoration
     
     func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
-        print("applicationShouldSaveApplicationState: \(application.applicationState)")
+        callPrint("applicationShouldSaveApplicationState: \(application.applicationState)")
         return true
     }
     
     func application(_ application: UIApplication, shouldRestoreApplicationState coder: NSCoder) -> Bool {
-        print("applicationShouldRestoreApplicationState: \(application.applicationState)")
+        callPrint("applicationShouldRestoreApplicationState: \(application.applicationState)")
         return true
     }
     
     func application(_ application: UIApplication, viewControllerWithRestorationIdentifierPath identifierComponents: [Any], coder: NSCoder) -> UIViewController? {
-        print("applicationViewControllerWithRestorationIdentifierPath: \(application.applicationState)")
+        callPrint("applicationViewControllerWithRestorationIdentifierPath: \(application.applicationState)")
         return nil
     }
     
     func application(_ application: UIApplication, willEncodeRestorableStateWith coder: NSCoder) {
-        print("applicationWillEncodeRestorableStateWith: \(application.applicationState)")
+        callPrint("applicationWillEncodeRestorableStateWith: \(application.applicationState)")
     }
     
     func application(_ application: UIApplication, didDecodeRestorableStateWith coder: NSCoder) {
-        print("applicationDidDecodeRestorableStateWith: \(application.applicationState)")
+        callPrint("applicationDidDecodeRestorableStateWith: \(application.applicationState)")
     }
     
     // MARK: Downloading Data in the Background
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        print("applicationPerformFetchWithCompletionHandler: \(application.applicationState)")
+        callPrint("applicationPerformFetchWithCompletionHandler: \(application.applicationState)")
     }
     
     func application(_ application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: @escaping () -> Void) {
-        print("applicationHandleEventsForBackgroundURLSession: \(application.applicationState)")
+        callPrint("applicationHandleEventsForBackgroundURLSession: \(application.applicationState)")
     }
     
     // MARK: Handling Remote Notification Registration
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        print("applicationDidRegisterForRemoteNotificationsWithDeviceToken: \(application.applicationState)")
+        callPrint("applicationDidRegisterForRemoteNotificationsWithDeviceToken: \(application.applicationState)")
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        print("applicationDidFailToRegisterForRemoteNotificationsWithError: \(application.applicationState)")
+        callPrint("applicationDidFailToRegisterForRemoteNotificationsWithError: \(application.applicationState)")
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        print("applicationDidReceiveRemoteNotification: \(application.applicationState)")
+        callPrint("applicationDidReceiveRemoteNotification: \(application.applicationState)")
     }
     
     // MARK: Continuing User Activity and Handling Quick Actions
     
     func application(_ application: UIApplication, willContinueUserActivityWithType userActivityType: String) -> Bool {
-        print("applicationWillContinueUserActivityWithType: \(application.applicationState)")
+        callPrint("applicationWillContinueUserActivityWithType: \(application.applicationState)")
         return true
     }
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
-        print("applicationContinueUserActivityRestorationHandler: \(application.applicationState)")
+        callPrint("applicationContinueUserActivityRestorationHandler: \(application.applicationState)")
         return true
     }
     
     func application(_ application: UIApplication, didUpdate userActivity: NSUserActivity) {
-        print("applicationDidUpdateUserActivity: \(application.applicationState)")
+        callPrint("applicationDidUpdateUserActivity: \(application.applicationState)")
     }
     
     func application(_ application: UIApplication, didFailToContinueUserActivityWithType userActivityType: String, error: Error) {
-        print("applicationDidFailToContinueUserActivityWithType: \(application.applicationState)")
+        callPrint("applicationDidFailToContinueUserActivityWithType: \(application.applicationState)")
     }
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        print("applicationPerformActionForShortcutItem: \(application.applicationState)")
+        callPrint("applicationPerformActionForShortcutItem: \(application.applicationState)")
     }
     
     // MARK: Interacting With WatchKit
     
     func application(_ application: UIApplication, handleWatchKitExtensionRequest userInfo: [AnyHashable : Any]?, reply: @escaping ([AnyHashable : Any]?) -> Void) {
-        print("applicationHandleWatchKitExtensionRequest: \(application.applicationState)")
+        callPrint("applicationHandleWatchKitExtensionRequest: \(application.applicationState)")
     }
     
     // MARK: Interacting With HealthKit
     
     func applicationShouldRequestHealthAuthorization(_ application: UIApplication) {
-        print("applicationShouldRequestHealthAuthorization: \(application.applicationState)")
+        callPrint("applicationShouldRequestHealthAuthorization: \(application.applicationState)")
     }
     
     // MARK: Opening a URL-Specified Resource
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        print("applicationOpenURL: \(app.applicationState)")
+        callPrint("applicationOpenURL: \(app.applicationState)")
         return true
     }
     
     // MARK: Disallowing Specified App Extension Types
     
     func application(_ application: UIApplication, shouldAllowExtensionPointIdentifier extensionPointIdentifier: UIApplicationExtensionPointIdentifier) -> Bool {
-        print("applicationShouldAllowExtensionPointIdentifier: \(application.applicationState)")
+        callPrint("applicationShouldAllowExtensionPointIdentifier: \(application.applicationState)")
         return true
     }
     
@@ -192,23 +200,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Managing Interface Geometry
     
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        print("applicationSupportedInterfaceOrientationsFor: \(application.applicationState)")
+        callPrint("applicationSupportedInterfaceOrientationsFor: \(application.applicationState)")
         return .all
     }
     
     func application(_ application: UIApplication, willChangeStatusBarOrientation newStatusBarOrientation: UIInterfaceOrientation, duration: TimeInterval) {
-        print("applicationWillChangeStatusBarOrientation: \(application.applicationState)")
+        callPrint("applicationWillChangeStatusBarOrientation: \(application.applicationState)")
     }
     
     func application(_ application: UIApplication, didChangeStatusBarOrientation oldStatusBarOrientation: UIInterfaceOrientation) {
-        print("applicationDidChangeStatusBarOrientation: \(application.applicationState)")
+        callPrint("applicationDidChangeStatusBarOrientation: \(application.applicationState)")
     }
     
     func application(_ application: UIApplication, willChangeStatusBarFrame newStatusBarFrame: CGRect) {
-        print("applicationWillChangeStatusBarFrame: \(application.applicationState)")
+        callPrint("applicationWillChangeStatusBarFrame: \(application.applicationState)")
     }
     
     func application(_ application: UIApplication, didChangeStatusBarFrame oldStatusBarFrame: CGRect) {
-        print("applicationDidChangeStatusBarFrame: \(application.applicationState)")
+        callPrint("applicationDidChangeStatusBarFrame: \(application.applicationState)")
     }
 }
