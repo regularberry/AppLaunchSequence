@@ -1,2 +1,11 @@
-whatup
-
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "VHK5T9DC9A.com.regularberry.AppLaunchSequence",
+        "paths": ["*"]
+      }
+    ]
+  }
+}

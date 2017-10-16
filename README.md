@@ -10,6 +10,7 @@ This data was gathered using iOS 11.0.3 on an iPhone 6. If you suspect you'll ha
 # Actions
 * [Launching the app](#launching-the-app---from-not-loaded)
 * [Backgrounding the app](#backgrounding-the-app---from-active)
+* [Universal Links](#universal-link---from-not-loaded)
 
 ## Launching the app - from *Not Loaded*
 1. applicationWillChangeStatusBarFrame: Inactive
@@ -35,3 +36,35 @@ This data was gathered using iOS 11.0.3 on an iPhone 6. If you suspect you'll ha
 3. applicationShouldSaveApplicationState: Background
 4. applicationWillEncodeRestorableStateWith: Background
 5. applicationSupportedInterfaceOrientationsFor: Background
+
+## Univeral Link - from *Not Loaded*
+1. applicationWillChangeStatusBarFrame: Inactive
+2. applicationDidChangeStatusBarFrame: Inactive
+3. applicationSupportedInterfaceOrientationsFor: Inactive
+4. applicationSupportedInterfaceOrientationsFor: Inactive
+5. applicationSupportedInterfaceOrientationsFor: Inactive
+6. applicationSupportedInterfaceOrientationsFor: Inactive
+7. applicationWillFinishLaunchingWithOptions: Inactive - LaunchOptions: [__C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsSourceApplicationKey): com.tinyspeck.chatlyio, __C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsUserActivityDictionaryKey): {
+    UIApplicationLaunchOptionsUserActivityIdentifierKey = "748F80DF-639A-4013-A8E6-F174E99DEE03";
+    UIApplicationLaunchOptionsUserActivityKey = "<NSUserActivity: 0x1c0023ba0>";
+    UIApplicationLaunchOptionsUserActivityTypeKey = NSUserActivityTypeBrowsingWeb;
+}]
+8. applicationShouldRestoreApplicationState: Inactive
+9. applicationDidDecodeRestorableStateWith: Inactive
+10. applicationDidFinishLaunchingWithOptions: Inactive - LaunchOptions: [__C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsSourceApplicationKey): com.tinyspeck.chatlyio, __C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsUserActivityDictionaryKey): {
+    UIApplicationLaunchOptionsUserActivityIdentifierKey = "748F80DF-639A-4013-A8E6-F174E99DEE03";
+    UIApplicationLaunchOptionsUserActivityKey = "<NSUserActivity: 0x1c0023ba0>";
+    UIApplicationLaunchOptionsUserActivityTypeKey = NSUserActivityTypeBrowsingWeb;
+}]
+11. applicationSupportedInterfaceOrientationsFor: Inactive
+12. applicationSupportedInterfaceOrientationsFor: Inactive
+13. applicationSupportedInterfaceOrientationsFor: Inactive
+14. applicationWillContinueUserActivityWithType: Inactive
+15. applicationContinueUserActivityRestorationHandler: Inactive
+16. applicationDidBecomeActive: Active
+
+## Universal Link - from *Backgrounded*
+1. applicationWillEnterForeground: Background
+2. applicationWillContinueUserActivityWithType: Inactive
+3. applicationContinueUserActivityRestorationHandler: Inactive
+4. applicationDidBecomeActive: Active

@@ -26,10 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     var callCount = 1
+    var consoleOutput: String = ""
     
     // Help us format a GitHub numbered list
-    private func callPrint(_ str: String) {
-        print("\(callCount). \(str)")
+    private func callPrint(_ message: String) {
+        let str = "\(callCount). \(message)"
+        print(str)
+        consoleOutput += "\(str)\n"
         callCount += 1
     }
     
