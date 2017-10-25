@@ -46,18 +46,18 @@ This data was gathered using iOS 11.0.3
 4. applicationSupportedInterfaceOrientationsFor: Inactive
 5. applicationSupportedInterfaceOrientationsFor: Inactive
 6. applicationSupportedInterfaceOrientationsFor: Inactive
-7. applicationWillFinishLaunchingWithOptions: Inactive - LaunchOptions: [__C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsSourceApplicationKey): com.tinyspeck.chatlyio, __C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsUserActivityDictionaryKey): {
+7. applicationWillFinishLaunchingWithOptions: Inactive - LaunchOptions: {
     UIApplicationLaunchOptionsUserActivityIdentifierKey = "748F80DF-639A-4013-A8E6-F174E99DEE03";
     UIApplicationLaunchOptionsUserActivityKey = "<NSUserActivity: 0x1c0023ba0>";
     UIApplicationLaunchOptionsUserActivityTypeKey = NSUserActivityTypeBrowsingWeb;
-}]
+}
 8. applicationShouldRestoreApplicationState: Inactive
 9. applicationDidDecodeRestorableStateWith: Inactive
-10. applicationDidFinishLaunchingWithOptions: Inactive - LaunchOptions: [__C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsSourceApplicationKey): com.tinyspeck.chatlyio, __C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsUserActivityDictionaryKey): {
-    UIApplicationLaunchOptionsUserActivityIdentifierKey = "748F80DF-639A-4013-A8E6-F174E99DEE03";
-    UIApplicationLaunchOptionsUserActivityKey = "<NSUserActivity: 0x1c0023ba0>";
-    UIApplicationLaunchOptionsUserActivityTypeKey = NSUserActivityTypeBrowsingWeb;
-}]
+10. applicationDidFinishLaunchingWithOptions: Inactive - LaunchOptions: {
+		UIApplicationLaunchOptionsUserActivityIdentifierKey = "748F80DF-639A-4013-A8E6-F174E99DEE03";
+    	UIApplicationLaunchOptionsUserActivityKey = "<NSUserActivity: 0x1c0023ba0>";
+    	UIApplicationLaunchOptionsUserActivityTypeKey = NSUserActivityTypeBrowsingWeb;
+	}
 11. applicationSupportedInterfaceOrientationsFor: Inactive
 12. applicationSupportedInterfaceOrientationsFor: Inactive
 13. applicationSupportedInterfaceOrientationsFor: Inactive
@@ -78,17 +78,21 @@ This data was gathered using iOS 11.0.3
 4. applicationSupportedInterfaceOrientationsFor: Inactive
 5. applicationSupportedInterfaceOrientationsFor: Inactive
 6. applicationSupportedInterfaceOrientationsFor: Inactive
-7. applicationWillFinishLaunchingWithOptions: Inactive - LaunchOptions: [__C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsSourceApplicationKey): com.apple.CoreSimulator.CoreSimulatorBridge, __C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsURLKey): appLaunchSeq://whatup]
-8. applicationDidFinishLaunchingWithOptions: Inactive - LaunchOptions: [__C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsSourceApplicationKey): com.apple.CoreSimulator.CoreSimulatorBridge, __C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsURLKey): appLaunchSeq://whatup]
+7. applicationWillFinishLaunchingWithOptions: Inactive - LaunchOptions: {
+		UIApplicationLaunchOptionsURLKey: appLaunchSeq://whatup
+	}
+8. applicationDidFinishLaunchingWithOptions: Inactive - LaunchOptions: {
+		UIApplicationLaunchOptionsURLKey: appLaunchSeq://whatup
+	}
 9. applicationSupportedInterfaceOrientationsFor: Inactive
 10. applicationSupportedInterfaceOrientationsFor: Inactive
 11. applicationSupportedInterfaceOrientationsFor: Inactive
-12. applicationOpenURL: Inactive URL:appLaunchSeq://whatup Options:[__C.UIApplicationOpenURLOptionsKey(_rawValue: UIApplicationOpenURLOptionsSourceApplicationKey): com.apple.CoreSimulator.CoreSimulatorBridge, __C.UIApplicationOpenURLOptionsKey(_rawValue: UIApplicationOpenURLOptionsOpenInPlaceKey): 0]
+12. applicationOpenURL: Inactive URL:appLaunchSeq://whatup
 13. applicationDidBecomeActive: Active
 
 ## Deep Link - from *Backgrounded*
 1. applicationWillEnterForeground: Background
-2. applicationOpenURL: Inactive URL:appLaunchSeq://whatup Options:[__C.UIApplicationOpenURLOptionsKey(_rawValue: UIApplicationOpenURLOptionsSourceApplicationKey): com.apple.CoreSimulator.CoreSimulatorBridge, __C.UIApplicationOpenURLOptionsKey(_rawValue: UIApplicationOpenURLOptionsOpenInPlaceKey): 0]
+2. applicationOpenURL: Inactive URL:appLaunchSeq://whatup
 3. applicationDidBecomeActive: Active
 
 
