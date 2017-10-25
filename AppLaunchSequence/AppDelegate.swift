@@ -181,7 +181,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Opening a URL-Specified Resource
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        callPrint("applicationOpenURL: \(app.applicationState)")
+        callPrint("applicationOpenURL: \(app.applicationState) URL:\(url) Options:\(options)")
         return true
     }
     
@@ -194,11 +194,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: Handling SiriKit Intents
     
-    //func application(_ application: UIApplication, handle: INIntent, )
+    // func application(_ application: UIApplication, handle: INIntent, completionHandler: (INIntentResponse) -> Void)
     
     // MARK: Handling CloudKit Invitations
     
-    //func applicationuserDidAc
+    // func application(_ application: UIApplication, userDidAcceptCloudKitShareWith: CKShareMetadata)
     
     // MARK: Managing Interface Geometry
     

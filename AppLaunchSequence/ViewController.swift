@@ -20,4 +20,3 @@ class ViewController: UIViewController {
         self.textView.text = (UIApplication.shared.delegate as? AppDelegate)!.consoleOutput
     }
 }
-

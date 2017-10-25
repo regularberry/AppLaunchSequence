@@ -1,16 +1,18 @@
 # About
-This reference will tell you the order in which UIApplicationDelegate methods are called, based on the action performed and the current state of the app.
+This reference will tell you the order in which UIApplicationDelegate methods are called based on the action performed and the current state of the app.
 
 # Definitions
-*Not Loaded* is defined as the app not being in memory at all
-*Backgrounded* is defined as being in the background, not yet purged from memory.
+**Not Loaded** is defined as the app not being in memory at all.
 
-This data was gathered using iOS 11.0.3 on an iPhone 6. If you suspect you'll have different results on the version of iOS you're using or your particular device, feel free to pull down the code and run a test yourself.
+**Backgrounded** is defined as being in the background (not yet purged from memory).
+
+This data was gathered using iOS 11.0.3
 
 # Actions
 * [Launching the app](#launching-the-app---from-not-loaded)
 * [Backgrounding the app](#backgrounding-the-app---from-active)
-* [Universal Links](#universal-link---from-not-loaded)
+* [Open Universal Link](#universal-link---from-not-loaded)
+* [Open Deep Link](#deep-link---from-not-loaded)
 
 ## Launching the app - from *Not Loaded*
 1. applicationWillChangeStatusBarFrame: Inactive
@@ -37,7 +39,7 @@ This data was gathered using iOS 11.0.3 on an iPhone 6. If you suspect you'll ha
 4. applicationWillEncodeRestorableStateWith: Background
 5. applicationSupportedInterfaceOrientationsFor: Background
 
-## Univeral Link - from *Not Loaded*
+## Universal Link - from *Not Loaded*
 1. applicationWillChangeStatusBarFrame: Inactive
 2. applicationDidChangeStatusBarFrame: Inactive
 3. applicationSupportedInterfaceOrientationsFor: Inactive
@@ -68,3 +70,25 @@ This data was gathered using iOS 11.0.3 on an iPhone 6. If you suspect you'll ha
 2. applicationWillContinueUserActivityWithType: Inactive
 3. applicationContinueUserActivityRestorationHandler: Inactive
 4. applicationDidBecomeActive: Active
+
+## Deep Link - from *Not Loaded*
+1. applicationWillChangeStatusBarFrame: Inactive
+2. applicationDidChangeStatusBarFrame: Inactive
+3. applicationSupportedInterfaceOrientationsFor: Inactive
+4. applicationSupportedInterfaceOrientationsFor: Inactive
+5. applicationSupportedInterfaceOrientationsFor: Inactive
+6. applicationSupportedInterfaceOrientationsFor: Inactive
+7. applicationWillFinishLaunchingWithOptions: Inactive - LaunchOptions: [__C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsSourceApplicationKey): com.apple.CoreSimulator.CoreSimulatorBridge, __C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsURLKey): appLaunchSeq://whatup]
+8. applicationDidFinishLaunchingWithOptions: Inactive - LaunchOptions: [__C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsSourceApplicationKey): com.apple.CoreSimulator.CoreSimulatorBridge, __C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsURLKey): appLaunchSeq://whatup]
+9. applicationSupportedInterfaceOrientationsFor: Inactive
+10. applicationSupportedInterfaceOrientationsFor: Inactive
+11. applicationSupportedInterfaceOrientationsFor: Inactive
+12. applicationOpenURL: Inactive URL:appLaunchSeq://whatup Options:[__C.UIApplicationOpenURLOptionsKey(_rawValue: UIApplicationOpenURLOptionsSourceApplicationKey): com.apple.CoreSimulator.CoreSimulatorBridge, __C.UIApplicationOpenURLOptionsKey(_rawValue: UIApplicationOpenURLOptionsOpenInPlaceKey): 0]
+13. applicationDidBecomeActive: Active
+
+## Deep Link - from *Backgrounded*
+1. applicationWillEnterForeground: Background
+2. applicationOpenURL: Inactive URL:appLaunchSeq://whatup Options:[__C.UIApplicationOpenURLOptionsKey(_rawValue: UIApplicationOpenURLOptionsSourceApplicationKey): com.apple.CoreSimulator.CoreSimulatorBridge, __C.UIApplicationOpenURLOptionsKey(_rawValue: UIApplicationOpenURLOptionsOpenInPlaceKey): 0]
+3. applicationDidBecomeActive: Active
+
+
