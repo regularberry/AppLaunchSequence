@@ -13,6 +13,7 @@ This data was gathered using iOS 11.0.3
 * [Backgrounding the app](#backgrounding-the-app---from-active)
 * [Open Universal Link](#universal-link---from-not-loaded)
 * [Open Deep Link](#deep-link---from-not-loaded)
+* [Open Push Notification](#push-notification---from-not-loaded)
 
 ## Launching the app - from *Not Loaded*
 1. applicationWillChangeStatusBarFrame: Inactive
@@ -95,4 +96,38 @@ This data was gathered using iOS 11.0.3
 2. applicationOpenURL: Inactive URL:appLaunchSeq://whatup
 3. applicationDidBecomeActive: Active
 
+## Push Notification - from *Not Loaded*
+1. applicationWillChangeStatusBarFrame: Inactive
+2. applicationDidChangeStatusBarFrame: Inactive
+3. applicationSupportedInterfaceOrientationsFor: Inactive
+4. applicationSupportedInterfaceOrientationsFor: Inactive
+5. applicationSupportedInterfaceOrientationsFor: Inactive
+6. applicationSupportedInterfaceOrientationsFor: Inactive
+7. applicationWillFinishLaunchingWithOptions: Inactive - LaunchOptions: [__C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsRemoteNotificationKey): {
+    aps =     {
+        alert = "Hi Sean!";
+        badge = 1;
+        sound = default;
+    };
+}]
+8. applicationShouldRestoreApplicationState: Inactive
+9. applicationDidDecodeRestorableStateWith: Inactive
+10. applicationDidFinishLaunchingWithOptions: Inactive - LaunchOptions: [__C.UIApplicationLaunchOptionsKey(_rawValue: UIApplicationLaunchOptionsRemoteNotificationKey): {\
+    aps =     {
+        alert = "Hi Sean!";
+        badge = 1;
+        sound = default;
+    };
+}]
+11. applicationSupportedInterfaceOrientationsFor: Inactive
+12. applicationSupportedInterfaceOrientationsFor: Inactive
+13. applicationSupportedInterfaceOrientationsFor: Inactive
+14. applicationDidReceiveRemoteNotification: Inactive
+15. applicationDidRegisterForRemoteNotificationsWithDeviceToken: Inactive
+16. applicationDidBecomeActive: Active
+
+## Push Notificaiton - from *Backgrounded*
+1. applicationWillEnterForeground: Background
+2. applicationDidReceiveRemoteNotification: Inactive
+3. applicationDidBecomeActive: Active
 

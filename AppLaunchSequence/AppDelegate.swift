@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 extension UIApplicationState: CustomStringConvertible {
     public var description: String {
@@ -132,6 +133,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         callPrint("applicationDidRegisterForRemoteNotificationsWithDeviceToken: \(application.applicationState)")
+        
+        let tokenParts = deviceToken.map { data -> String in
+            return String(format: "%02.2hhx", data)
+        }
+        
+        let token = tokenParts.joined()
+        print("Device Token: \(token)")
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
@@ -221,5 +229,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didChangeStatusBarFrame oldStatusBarFrame: CGRect) {
         callPrint("applicationDidChangeStatusBarFrame: \(application.applicationState)")
+    }
+    
+    func askForNotificationPermission() {
+        UIApplication.shared.registerForRemoteNotifications()
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in }
     }
 }
