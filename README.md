@@ -123,8 +123,7 @@ This data was gathered using iOS 11.0.3
 12. applicationSupportedInterfaceOrientationsFor: Inactive
 13. applicationSupportedInterfaceOrientationsFor: Inactive
 14. applicationDidReceiveRemoteNotification: Inactive
-15. applicationDidRegisterForRemoteNotificationsWithDeviceToken: Inactive
-16. applicationDidBecomeActive: Active
+15. applicationDidBecomeActive: Active
 
 ## Push Notificaiton - from *Backgrounded*
 1. applicationWillEnterForeground: Background
