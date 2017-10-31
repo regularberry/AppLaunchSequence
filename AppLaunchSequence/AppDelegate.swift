@@ -230,10 +230,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didChangeStatusBarFrame oldStatusBarFrame: CGRect) {
         callPrint("applicationDidChangeStatusBarFrame: \(application.applicationState)")
     }
-    
-    func askForNotificationPermission() {
-        UIApplication.shared.registerForRemoteNotifications()
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in }
-    }
 }

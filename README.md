@@ -14,6 +14,7 @@ This data was gathered using iOS 11.0.3
 * [Open Universal Link](#universal-link---from-not-loaded)
 * [Open Deep Link](#deep-link---from-not-loaded)
 * [Open Push Notification](#push-notification---from-not-loaded)
+* [System Alert Displayed](#system-alert-displayed)
 
 ## Launching the app - from *Not Loaded*
 1. applicationWillChangeStatusBarFrame: Inactive
@@ -129,4 +130,10 @@ This data was gathered using iOS 11.0.3
 1. applicationWillEnterForeground: Background
 2. applicationDidReceiveRemoteNotification: Inactive
 3. applicationDidBecomeActive: Active
+
+## System Alert Displayed (e.g. when asking for notification privileges)
+1. applicationWillResignActive: Active
+Device Token: af491aa0b7a299037b184c8a0ed1ea8299e9e93cd797f866bd38dc7eb98e9443
+2. applicationDidBecomeActive: Active
+Device Token: af491aa0b7a299037b184c8a0ed1ea8299e9e93cd797f866bd38dc7eb98e9443
 

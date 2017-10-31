@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
@@ -18,5 +19,12 @@ class ViewController: UIViewController {
 
     @IBAction func updateTextView(){
         self.textView.text = (UIApplication.shared.delegate as? AppDelegate)!.consoleOutput
+        askForNotificationPermission()
+    }
+    
+    func askForNotificationPermission() {
+        UIApplication.shared.registerForRemoteNotifications()
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in }
     }
 }
