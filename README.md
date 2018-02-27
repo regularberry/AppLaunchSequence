@@ -15,6 +15,7 @@ This data was gathered using iOS 11.0.3
 * [Open Deep Link](#deep-link---from-not-loaded)
 * [Open Push Notification](#push-notification---from-not-loaded)
 * [System Alert Displayed](#system-alert-displayed)
+* [Background Fetch](#background-fetch---from-not-loaded)
 
 ## Launching the app - from *Not Loaded*
 1. applicationWillChangeStatusBarFrame: Inactive
@@ -135,4 +136,19 @@ This data was gathered using iOS 11.0.3
 (e.g. when asking for notification privileges)
 1. applicationWillResignActive: Active
 2. applicationDidBecomeActive: Active
+
+## Background Fetch - from *Not Loaded*
+1. applicationWillChangeStatusBarFrame: Background
+2. applicationDidChangeStatusBarFrame: Background
+3. applicationSupportedInterfaceOrientationsFor: Background
+4. applicationSupportedInterfaceOrientationsFor: Background
+5. applicationSupportedInterfaceOrientationsFor: Background
+6. applicationSupportedInterfaceOrientationsFor: Background
+7. applicationWillFinishLaunchingWithOptions: Background - LaunchOptions: nil
+8. applicationDidFinishLaunchingWithOptions: Background - LaunchOptions: nil
+9. applicationSupportedInterfaceOrientationsFor: Background
+10. applicationSupportedInterfaceOrientationsFor: Background
+11. applicationSupportedInterfaceOrientationsFor: Background
+12. applicationPerformFetchWithCompletionHandler: Background
+
 
