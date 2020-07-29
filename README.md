@@ -127,7 +127,7 @@ This data was gathered using iOS 11.0.3
 14. applicationDidReceiveRemoteNotification: Inactive
 15. applicationDidBecomeActive: Active
 
-## Push Notificaiton - from *Backgrounded*
+## Push Notification - from *Backgrounded*
 1. applicationWillEnterForeground: Background
 2. applicationDidReceiveRemoteNotification: Inactive
 3. applicationDidBecomeActive: Active
